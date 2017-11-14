@@ -1,0 +1,126 @@
+
+a.navbar-brand:hover 
+{
+  webkit-filter: blur(6px); 
+    filter: blur(6px);
+     transition: all 1s ease-out;}
+    
+    li.nav-item:hover {
+	background: rgba(0,0,0,0);
+	box-shadow: inset 0 0 15px 1px #f8f6f6;
+	transition: .5s;
+}
+
+h1.hero-title {
+    -webkit-text-fill-color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+  
+h3:hover  
+ {
+background: -webkit-linear-gradient(right, #009eee 10%, #0bc2c9 25%, #4f26fc, #01122b 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 1s; 
+
+ }
+
+
+a:hover {
+    color: #001a3e;
+    transition: .5s ease-in-out;
+     border-bottom: non;
+    text-decoration: underline;
+    text-decoration-color: #4f26fc
+  background-color: #translucent;
+
+}
+
+
+.navbar-default .navbar-nav li a:hover,
+.btn-primary,
+.btn-primary.btn-outline {
+    color: #white;
+}
+
+/* Articles */
+
+.article-title a {
+    color: #black;
+}
+
+.article-metadata a {
+    color: #001a3e;
+}
+
+.article-metadata a:hover {
+    color: #009eee;
+}
+
+/* Standard buttons */
+
+.btn-primary,
+.btn-primary.btn-outline {
+    border-color: rgb(76,175,80);
+}
+
+/* Hover buttons */
+
+.btn-primary.btn-outline:hover {
+    border-color: #5c41e2;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:visited,
+.btn-primary.btn-outline:active {
+    background-color: #01122b);
+}
+
+
+
+html {
+	
+  line-height: 1.8;
+}
+
+h1 {
+font-weight: 200;
+
+  }
+
+
+  
+/* edited out
+
+
+/* edited out
+
+h1, h6 {
+text-decoration: underline;
+background: -webkit-linear-gradient(right, #009eee 10%, #0bc2c9 25%, #4f26fc, #01122b 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
+
+h1 {
+font-weight: 600;
+background: -webkit-linear-gradient(right, #009eee 20%, #0bc2c9 25%, #4f26fc, #01122b 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
+  
+background-image: -webkit-linear-gradient(right, #01122b 50%, rgba(100, 208, 336, 0.99) 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width:800px;
+  margin:auto;
+  }
+  
+  font-family: 'Oswald', sans-serif;
