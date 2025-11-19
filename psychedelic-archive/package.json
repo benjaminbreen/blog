@@ -1,0 +1,45 @@
+{
+  "name": "psychedelic-archive",
+  "version": "1.0.0",
+  "description": "A beautiful, modern CMS-based website for preserving and sharing psychedelic history through primary sources and historical documents",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS=\"${NODE_OPTIONS} --no-deprecation\" next dev",
+    "build": "cross-env NODE_OPTIONS=\"${NODE_OPTIONS} --no-deprecation\" next build",
+    "start": "cross-env NODE_OPTIONS=\"${NODE_OPTIONS} --no-deprecation\" next start",
+    "lint": "next lint",
+    "generate:types": "payload generate:types",
+    "payload": "payload"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@payloadcms/db-postgres": "^3.64.0",
+    "@payloadcms/next": "^3.64.0",
+    "@payloadcms/richtext-lexical": "^3.64.0",
+    "@payloadcms/ui": "^3.64.0",
+    "@tanstack/react-query": "^5.90.10",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.6",
+    "@types/react-dom": "^19.2.3",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.554.0",
+    "next": "^15.5.6",
+    "payload": "^3.64.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.34.5",
+    "tailwind-merge": "^3.4.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "cross-env": "^10.1.0",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  }
+}
