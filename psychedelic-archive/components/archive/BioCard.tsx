@@ -2,14 +2,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { User } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/Card'
-import { Badge } from '@/components/ui/Badge'
+import { Badge, type BadgeProps } from '@/components/ui/Badge'
+
+type BadgeVariant = NonNullable<BadgeProps['variant']>
+type BioType = 'researcher' | 'user_patient' | 'personal_history' | 'other'
 
 interface BioCardProps {
   bio: {
     id: string
     name: string
     slug: string
-    type: string
+    type: BioType
     summary: string
     birthDate?: string
     deathDate?: string
@@ -20,14 +23,14 @@ interface BioCardProps {
   }
 }
 
-const typeLabels: Record<string, string> = {
+const typeLabels: Record<BioType, string> = {
   researcher: 'Researcher',
   user_patient: 'User/Patient',
   personal_history: 'Personal History',
   other: 'Other',
 }
 
-const typeColors: Record<string, any> = {
+const typeColors: Record<BioType, BadgeVariant> = {
   researcher: 'blue',
   user_patient: 'green',
   personal_history: 'orange',

@@ -7,7 +7,18 @@ export const Bios: CollectionConfig = {
     defaultColumns: ['name', 'type', 'updatedAt'],
   },
   access: {
-    read: () => true,
+    read: ({ req: { user } }) => {
+      if (!user) {
+        return { status: { equals: 'published' } }
+      }
+      return true
+    },
+    create: ({ req: { user } }) => !!user,
+    update: ({ req: { user } }) => {
+      if (!user) return false
+      return user.role === 'admin' || user.role === 'editor'
+    },
+    delete: ({ req: { user } }) => user?.role === 'admin',
   },
   fields: [
     {

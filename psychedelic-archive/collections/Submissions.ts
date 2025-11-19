@@ -6,6 +6,15 @@ export const Submissions: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'submitterEmail', 'status', 'createdAt'],
   },
+  access: {
+    create: () => true, // Public can submit
+    read: ({ req: { user } }) => !!user, // Only authenticated users can read submissions
+    update: ({ req: { user } }) => {
+      // Only admins and editors can update
+      return user?.role === 'admin' || user?.role === 'editor'
+    },
+    delete: ({ req: { user } }) => user?.role === 'admin',
+  },
   fields: [
     {
       name: 'title',

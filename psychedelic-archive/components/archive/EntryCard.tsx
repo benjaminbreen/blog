@@ -2,8 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FileText, Calendar, Tag } from 'lucide-react'
 import { Card, CardContent, CardFooter } from '@/components/ui/Card'
-import { Badge } from '@/components/ui/Badge'
+import { Badge, type BadgeProps } from '@/components/ui/Badge'
 import { formatDate } from '@/lib/utils'
+
+type BadgeVariant = NonNullable<BadgeProps['variant']>
 
 interface EntryCardProps {
   entry: {
@@ -14,7 +16,7 @@ interface EntryCardProps {
     date: string
     category: {
       name: string
-      color: string
+      color: BadgeVariant
       slug: string
     }
     era: {
@@ -48,7 +50,7 @@ export function EntryCard({ entry }: EntryCardProps) {
         )}
         <CardContent className="p-6">
           <div className="mb-3 flex items-center gap-2">
-            <Badge variant={entry.category.color as any}>
+            <Badge variant={entry.category.color}>
               {entry.category.name}
             </Badge>
             <Badge variant="default">{entry.era.name}</Badge>

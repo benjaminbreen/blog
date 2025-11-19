@@ -7,7 +7,25 @@ export const Entries: CollectionConfig = {
     defaultColumns: ['title', 'category', 'era', 'status', 'updatedAt'],
   },
   access: {
-    read: () => true,
+    read: ({ req: { user } }) => {
+      // Public can read published entries
+      if (!user) {
+        return {
+          status: { equals: 'published' },
+        }
+      }
+      // Authenticated users can read all
+      return true
+    },
+    create: ({ req: { user } }) => !!user,
+    update: ({ req: { user } }) => {
+      if (!user) return false
+      // Admins and editors can update all
+      if (user.role === 'admin' || user.role === 'editor') return true
+      // Contributors can only update their own drafts (would need createdBy field)
+      return false
+    },
+    delete: ({ req: { user } }) => user?.role === 'admin',
   },
   fields: [
     {

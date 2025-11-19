@@ -35,13 +35,13 @@ export default buildConfig({
     Tags,
   ],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || 'your-secret-key-change-this',
+  secret: process.env.PAYLOAD_SECRET!,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/psychedelic_archive',
+      connectionString: process.env.DATABASE_URL!,
     },
   }),
 })
