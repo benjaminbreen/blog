@@ -2,6 +2,19 @@
 
 A beautiful, modern CMS-based website for preserving and sharing the history of psychedelics through primary sources, biographical materials, and historical documents.
 
+## 🚀 Quick Start
+
+**Get up and running in 5 minutes:**
+
+```bash
+cd psychedelic-archive
+./setup.sh
+```
+
+Or see [QUICKSTART.md](./QUICKSTART.md) for detailed step-by-step instructions.
+
+---
+
 ## Features
 
 ### 🎨 Beautiful, Modern Design
