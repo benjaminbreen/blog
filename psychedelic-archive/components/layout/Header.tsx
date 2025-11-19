@@ -111,6 +111,13 @@ export function Header() {
             </div>
 
             <Link
+              href="/personal-histories"
+              className="text-sm font-medium text-gray-700 transition-colors hover:text-primary-600"
+            >
+              Personal Histories
+            </Link>
+
+            <Link
               href="/submit"
               className="text-sm font-medium text-gray-700 transition-colors hover:text-primary-600"
             >
@@ -159,6 +166,12 @@ export function Header() {
                 className="text-sm font-medium text-gray-700 hover:text-primary-600"
               >
                 Biographies
+              </Link>
+              <Link
+                href="/personal-histories"
+                className="text-sm font-medium text-gray-700 hover:text-primary-600"
+              >
+                Personal Histories
               </Link>
               <Link
                 href="/submit"

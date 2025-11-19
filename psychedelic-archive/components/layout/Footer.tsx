@@ -43,6 +43,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/personal-histories" className="text-gray-600 hover:text-primary-600">
+                  Personal Histories
+                </Link>
+              </li>
+              <li>
                 <Link href="/submit" className="text-gray-600 hover:text-primary-600">
                   Submit Entry
                 </Link>
